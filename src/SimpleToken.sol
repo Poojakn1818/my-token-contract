@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract SimpleToken is ERC20, Ownable {
     constructor() ERC20("SimpleToken", "STK") Ownable(msg.sender) {
         // Mint 1,000,000 tokens to the deployer
-        _mint(msg.sender, 1000000 * 10**decimals());
+        _mint(msg.sender, 1000000 * 10 ** decimals());
     }
 
     // Function to mint additional tokens (only owner)
